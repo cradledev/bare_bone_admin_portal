@@ -55,7 +55,17 @@ const View = ({ match: { params: { id } } }) => {
 
     // onChange function
     const onChange = event => {
-        setStudent({...student, [event.target.name] : event.target.value})
+        if(event.target.name == "phoneNumber") {
+            const re = /^[0-9\b]+$/;
+            if (event.target.value === '' || re.test(event.target.value)) {
+                setStudent({...student, [event.target.name] : event.target.value})
+            }
+        } else {
+            const re = /^[aA-zZ\s]+$/;
+            if (event.target.value === '' || re.test(event.target.value)) {
+                setStudent({...student, [event.target.name] : event.target.value})
+            }
+        }
     }
     return (
         <div className="container mt-3">
