@@ -10,7 +10,8 @@ const server = express()
 
 // loading modules
 setupLoadModules(server)
-
+// start GraphQL
+setupGraphQL(server)
 // start server
 setupStartServer(server)
 

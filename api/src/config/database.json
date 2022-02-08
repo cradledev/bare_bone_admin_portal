@@ -1,14 +1,14 @@
 {
     "development" : {
-        "username" : "root",
-        "password" : null,
+        "username" : "postgres",
+        "password" : "123qwe!@#QWE",
         "database" : "admin_portal",
         "host" : "127.0.0.1",
         "dialect" : "postgres"
     },
     "production" : {
-        "username" : "root",
-        "password" : null,
+        "username" : "postgres",
+        "password" : "123qwe!@#QWE",
         "database" : "admin_portal",
         "host" : "127.0.0.1",
         "dialect" : "postgres"
