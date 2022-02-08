@@ -14,7 +14,7 @@ const App = () => (
     <Layout>
         <Switch>
             {/* home */}
-            <Route path={routes.home} component={Home} exact />
+            <Route path={routes.home} component={StudentsList} exact />
             {/* Student */}
             <Route path={routes.students.list} component={StudentsList} exact/>
             <Route path={routes.students.create} component={StudentsCreate} />

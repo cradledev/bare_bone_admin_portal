@@ -1,3 +1,3 @@
 // URL
-export const APP_URL = process.env.REACT_APP_URL
-export const APP_URL_API = process.env.REACT_APP_URL_API
+export const APP_URL = "http://localhost:3000"
+export const APP_URL_API = "http://localhost:8000"

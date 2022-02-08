@@ -2,31 +2,28 @@ export default (sequelize, DataTypes) => {
     return sequelize.define('students', {
         id : {
             type : DataTypes.INTEGER,
-            allowNull : false,
+            field : "id",
             primaryKey : true,
+            allowNull : false,
             autoIncrement : true
         },
-        first_name : {
+        firstName : {
             type: DataTypes.STRING,
-            allowNull : false
+            allowNull : false,
+            field : "first_name"
         },
-        last_name : {
+        lastName : {
             type : DataTypes.STRING,
-            allowNull : false
+            allowNull : false,
+            field : "last_name"
         },
-        phone_number : {
-            type : DataTypes.INTEGER,
-            allowNull : true
-        },
-        created_at : {
-            type : DataTypes.DATE,
-            allowNull : false
-        },
-        update_at : {
-            type : DataTypes.DATE,
-            allowNull : false
+        phoneNumber : {
+            type : DataTypes.STRING,
+            allowNull : true,
+            field : "phone_number"
         }
     },{
-        tableName : 'students'
+        tableName : 'students',
+        timestamps: true
     });
 }

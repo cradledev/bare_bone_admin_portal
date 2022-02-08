@@ -1,9 +1,18 @@
 // import
-import { GraphQLInt, GraphQLList } from "graphql"
+import {GraphQLInt, GraphQLList} from "graphql"
 
 // app imports
 import StudentType from "../type"
-import { getAll, getById } from "../resolvers"
+import {getAll, getByID} from "../resolvers"
+
+// Student By ID
+export const student = {
+    type: StudentType,
+    args: {
+      id: {type: GraphQLInt}
+    },
+    resolve: getByID
+}
 
 // Students all
 export const students = {
@@ -11,11 +20,3 @@ export const students = {
     resolve : getAll
 }
 
-// Student By ID
-export const student = {
-    type : StudentType,
-    args : {
-        id : { type : GraphQLInt}
-    },
-    resolve : getById
-}

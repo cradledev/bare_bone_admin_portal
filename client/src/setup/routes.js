@@ -12,3 +12,5 @@ export const routes = {
         }
     }
 }
+
+export const routesApi = APP_URL_API
